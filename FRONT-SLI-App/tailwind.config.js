@@ -85,13 +85,19 @@ export default {
        maxHeight: {
         '0.5/10': '5%',
         '1/10': '10%',
+        '1.5/10': '15%',
         '2/10': '20%',
+        '2.5/10': '25%',
         '3/10': '30%',
+        '3.5/10': '35%',
         '4/10': '40%',
         '4.5/10': '45%',
         '5/10': '50%',
+        '5.5/10': '55%',
         '6/10': '60%',
+        '6.5/10': '65%',
         '7/10': '70%',
+        '7.5/10': '75%',
         '8/10': '80%',
         '8.5/10': '85%',
         '9/10': '90%',
@@ -102,13 +108,19 @@ export default {
       height: {
         '0.5/10': '5%',
         '1/10': '10%',
+        '1.5/10': '15%',
         '2/10': '20%',
+        '2.5/10': '25%',
         '3/10': '30%',
+        '3.5/10': '35%',
         '4/10': '40%',
         '4.5/10': '45%',
         '5/10': '50%',
+        '5.5/10': '55%',
         '6/10': '60%',
+        '6.5/10': '65%',
         '7/10': '70%',
+        '7.5/10': '75%',
         '8/10': '80%',
         '8.5/10': '85%',
         '9/10': '90%',
@@ -122,12 +134,13 @@ export default {
       colors: {
         "white-perso": "#f8f9fa",
         "white-perso2":"#e9ecef",
-        "gray-light1":"#dee2e6",
+        "gray-light":"#dee2e6",
         "gray-light2":"#ced4da",
         "gray-pers":"#adb5bd",
         "gray-strong":"#495057",
         "black-pers":"#343a40",
         "black-strong":"#212529",
+        'blue-perso': '#26474E',
 
 
       },
@@ -137,8 +150,21 @@ export default {
       },
 
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
+        'merriweather': ['Merriweather', 'serif'],
+        'Poppins': ['Poppins', 'sans-serif'],
       },
+      fontWeight: {
+        'light': '300',
+        'regular': '400',
+        'medium': '500',
+        'semi-bold': '600',
+        'bold': '700',
+        'extra-bold': '800',
+        'black': '900',
+        'italic': 'italic',
+        'extrabold-italic': '800 italic',
+      }
+    
     },
   },
   
