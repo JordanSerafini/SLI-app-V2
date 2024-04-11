@@ -20,7 +20,7 @@ function BottomNav({ title = "header", css = "" }) {
 
 
   return (
-    <div className=" flex flex-col gap-2 font-merriweather font-extrabold tracking-widest border-t-1 border-black-pers">
+    <div className="bg-black-pers w-full fixed bottom-0 flex flex-col gap-2 text-white font-merriweather font-bold tracking-widest border-t-1 border-black-pers ">
       <div className={`flex flex-row w-full justify-between p-2 ${css}`}>
         <div>
           <Icon type="Arrow_Back_iOS" theme="" onClick={handleBack}/>

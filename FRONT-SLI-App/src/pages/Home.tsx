@@ -16,7 +16,7 @@ function Home() {
           <HomeContent />
       </div>
       {/* --------------------------------------------- Nav ---------------------------------------- */}
-      <div className="h-1/10 w-full">
+      <div className="w-full">
       <BottomNav
           title="Accueil"
         />
