@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="w-screen h-screen bg-gray-light2 flex flex-col justify-start items-center gap-4">
       {/* --------------------------------------------- Header ---------------------------------------- */}
-      <div className="w-full ">
+      <div className="w-full h-1/10">
         <Header1
           title="Accueil"
           css=" font-merriweather font-black tracking-widest border-b-1 border-black-pers"
@@ -16,18 +16,14 @@ function Home() {
       {/* --------------------------------------------------------------------------------------------------- */}
       {/* --------------------------------------------- Body ---------------------------------------- */}
       {/* --------------------------------------------------------------------------------------------------- */}
-      < MenuHome />
-      <div className="h-8.5/10 w-full flex flex-col gap-8 ">
-      {/* ------------------------------------------------------------------------- Perso ---------------------------------------- */}
- 
-      {/* ----------------------------------------------------------------------- Home Card ---------------------------------------- */}
-
-        <>
+      <div className="h-1/10 w-full flex justify-center">
+        <MenuHome />
+      </div>
+      <div className="h-7.5/10 w-full flex flex-col gap- ">
           <HomeContent />
-        </>
       </div>
       {/* --------------------------------------------- Nav ---------------------------------------- */}
-      <div className="h-1/10 w-full">
+      <div className="h-0.5/10 w-full bg-red-500">
         <BottomNavBar1 />
       </div>
     </div>
