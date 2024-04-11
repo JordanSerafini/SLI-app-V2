@@ -28,10 +28,10 @@ const NavMenu: React.FC<NavMenuProps> = ({ showMenu, setShowMenu }) => {
   return (
 // Dans votre composant NavMenu, ajoutez un style initial pour positionner le menu hors de l'écran
 <div ref={menuRef} className="fixed right-0 top-0 w-7/10 bg-white z-50 h-full" style={{ transform: 'translateX(100%)' }}>
-      <Icon type="close" theme="" onClick={handleClick} className="fixed right-2 top-2"/>
+      <Icon type="close" theme="" onClick={handleClick} className="fixed right-2 bottom-3"/>
       <div>
         <div>
-
+        
         </div>
       </div>
     </div>

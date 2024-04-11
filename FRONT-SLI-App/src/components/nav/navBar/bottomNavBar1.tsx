@@ -2,22 +2,20 @@ import Icon from "../../SVG/Icon"
 
 function bottomNavBar1() {
   return (
-    <div>
-      <div className="w-full h-full flex justify-between items-center bg-gray-light2">
+      <div className="w-full h-full flex justify-between items-center ">
         <div className="w-1/4 h-full flex justify-center items-center">
-          <Icon type="home" className="w-8 h-8 text-black-pers" />
+          <Icon type="home" className=" text-black-pers text-3xl " />
         </div>
         <div className="w-1/4 h-full flex justify-center items-center">
-          <Icon type="search" className="w-8 h-8 text-black-pers" />
+          <Icon type="search" className=" text-black-pers text-3xl " />
         </div>
         <div className="w-1/4 h-full flex justify-center items-center">
-          <Icon type="heart" className="w-8 h-8 text-black-pers" />
+          <Icon type="add_task" className=" text-black-pers text-3xl " />
         </div>
         <div className="w-1/4 h-full flex justify-center items-center">
-          <Icon type="user" className="w-8 h-8 text-black-pers" />
+          <Icon type="pin_drop" className=" text-black-pers text-3xl  " />
         </div>
       </div>
-    </div>
   )
 }
 
