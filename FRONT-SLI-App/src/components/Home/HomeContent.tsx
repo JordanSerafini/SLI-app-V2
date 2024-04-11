@@ -9,10 +9,10 @@ function HomeContent() {
         <Cards title="Clients" type="Person" />
         <Cards title="Faire un devis" type="Format_List_Bulleted" />
         <Cards title="Bon de livraisons" type="Local_Shipping" />
+        <Cards title="Fournisseurs" type="Account_circle" />
         <Cards title="Bon de réception" type="Receipt_Long" />
         <Cards title="Bon de commande" type="Shopping_Cart" />
         <Cards title="Documents de stock" type="inventory" />
-        <Cards title="Fournisseurs" type="Account_circle" />
 
       </div>
     </div>

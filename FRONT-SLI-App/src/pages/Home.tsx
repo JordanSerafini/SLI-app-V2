@@ -19,7 +19,7 @@ function Home() {
       <div className="h-1/10 w-full">
       <Header1
           title="Accueil"
-          css=" font-merriweather font-black tracking-widest border-b-1 border-black-pers"
+          css=" font-merriweather font-extrabold tracking-widest border-t-1 pt-2 border-black-pers"
         />
       </div>
     </div>
