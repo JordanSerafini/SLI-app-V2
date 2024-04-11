@@ -4,7 +4,7 @@ function HomeContent() {
   return (
     <div className="h-9/10 overflow-auto">
       <div className="flex flex-row flex-wrap gap-x-2 gap-y-1 justify-center font-Poppins text-center font-extralight">
-        <Cards title="Articles" type="article" />
+        <Cards title="Articles" type="article" className="" />
         <Cards title="Favoris" type="Star" theme="#e7bc0d"/>
         <Cards title="Clients" type="Person" />
         <Cards title="Faire un devis" type="Format_List_Bulleted" />

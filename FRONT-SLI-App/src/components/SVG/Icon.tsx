@@ -8,7 +8,7 @@ interface IconProps {
   
   const Icon: React.FC<IconProps> = ({ type, theme, onClick, className = '', style }) => {
   
-     if (theme === undefined) theme = "blue";
+     if (theme === undefined) theme = "black";
   
   return (
       <span

@@ -146,7 +146,7 @@ export default {
       },
 
       screens: {
-        'res-w-400': '400px',
+        'resw400': '400px',
       },
 
       fontFamily: {

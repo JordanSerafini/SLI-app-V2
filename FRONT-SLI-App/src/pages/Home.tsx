@@ -5,7 +5,7 @@ import MenuHome from "../components/nav/menu/MenuHome";
 
 function Home() {
   return (
-    <div className="w-screen h-screen bg-gray-light2 flex flex-col justify-start items-center gap-4">
+    <div className="w-screen h-screen bg-gray-light2 flex flex-col justify-start items-center gap-4 overflow-hidden">
       {/* --------------------------------------------- Header ---------------------------------------- */}
       <div className="w-full h-1/10">
         <Header1
