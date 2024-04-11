@@ -121,9 +121,9 @@ export default {
       },
       colors: {
         "white-perso": "#f8f9fa",
-        "gray-light":"#e9ecef",
-        "gray-light2":"#dee2e6",
-        "gray-light3":"#ced4da",
+        "white-perso2":"#e9ecef",
+        "gray-light1":"#dee2e6",
+        "gray-light2":"#ced4da",
         "gray-pers":"#adb5bd",
         "gray-strong":"#495057",
         "black-pers":"#343a40",
