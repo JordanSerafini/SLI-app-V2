@@ -146,7 +146,7 @@ export default {
       },
 
       screens: {
-        'custom-breakpoint': '900px',
+        'res-w-400': '400px',
       },
 
       fontFamily: {

@@ -7,10 +7,10 @@ function MenuHome() {
       <Icon
         type="User_Attributes"
         theme="black"
-        className="text-3xl border- border-black rounded-full p-2 "
+        className="border- border-black rounded-full p-2 text-xl res-w-400:text-2xl sm:text-3xl"
       />
     </div>
-    <div className="font-Poppins text-sm flex flex-col gap-">
+    <div className="font-Poppins text-xs  sm:text-base resW400:text-sm  flex flex-col gap-">
       <div className="font-semibold">Jordan Serafini - <span className="text-blue-perso">Solution Logique</span></div>
       <div className="font-extralight ">administrateur</div>
     </div>
