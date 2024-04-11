@@ -1,4 +1,4 @@
-import Header1 from "../components/nav/headers/Header1";
+import BottomNav from "../components/nav/navBar/BottomNav";
 import HomeContent from "../components/Home/HomeContent";
 import MenuHome from "../components/nav/menu/MenuHome";
 
@@ -17,9 +17,8 @@ function Home() {
       </div>
       {/* --------------------------------------------- Nav ---------------------------------------- */}
       <div className="h-1/10 w-full">
-      <Header1
+      <BottomNav
           title="Accueil"
-          css=" font-merriweather font-extrabold tracking-widest border-t-1 pt-2 border-black-pers"
         />
       </div>
     </div>

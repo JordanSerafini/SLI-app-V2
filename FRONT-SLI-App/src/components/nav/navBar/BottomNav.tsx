@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Icon from "../../SVG/Icon";
 import NavMenu from "../menu/NavMenu";
 
-function Header1({ title = "header", css = "" }) {
+function BottomNav({ title = "header", css = "" }) {
   const [showMenu, setShowMenu] = useState(false);
 
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ function Header1({ title = "header", css = "" }) {
 
 
   return (
-    <div className=" flex flex-col gap-2">
+    <div className=" flex flex-col gap-2 font-merriweather font-extrabold tracking-widest border-t-1 border-black-pers">
       <div className={`flex flex-row w-full justify-between p-2 ${css}`}>
         <div>
           <Icon type="Arrow_Back_iOS" theme="" onClick={handleBack}/>
@@ -35,4 +35,4 @@ function Header1({ title = "header", css = "" }) {
   );
 }
 
-export default Header1;
+export default BottomNav;
