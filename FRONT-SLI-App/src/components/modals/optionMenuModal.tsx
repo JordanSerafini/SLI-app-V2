@@ -7,6 +7,7 @@ interface OptionMenuModalProps {
   setCardTheme: (theme: string) => void;
   setShowModal: (showModal: boolean) => void;
   setCardType: (type: string) => void;
+  setCss: (css: string) => void;
 }
 
 function OptionMenuModal({
@@ -15,11 +16,12 @@ function OptionMenuModal({
   setCardTheme,
   setCardType,
   setShowModal,
+  setCss,
 }: OptionMenuModalProps) {
   const [selectedIcon, setSelectedIcon] = useState("home");
   const icons = ["home", "face", "build", "alarm", "work", "school"];
-
   const [showLogoPicker, setShowLogoPicker] = useState(false);
+  const [showBorder, setShowBorder] = useState(false);
 
   const closeModal = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
@@ -44,12 +46,30 @@ function OptionMenuModal({
   const typeChange = (newType: string) => {
     setCardType(newType);
     setSelectedIcon(newType);
+    setShowLogoPicker(false);
+    setShowModal(false);
   };
 
   const showLogoPickerModal = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
     setShowLogoPicker(!showLogoPicker);
   };
+
+  // ------------------------------------------------ Gestion des Border --------------------------------
+
+  const handleBorder=()=>{
+    setShowBorder(true);
+    setCss("border-2 border-black")
+    setShowModal(false);
+  }
+
+  const removeBorder=()=>{
+    setShowBorder(false);
+    setCss("")
+    setShowModal(false);
+  }
+
+
 
   return (
     <div className="">
@@ -87,7 +107,10 @@ function OptionMenuModal({
           )}
         </div>
         <div className="">Supprimer la carte</div>
-        <div className="">Ajouter contour</div>
+
+        {showBorder ? <div className="" onClick={removeBorder}>Supprimer contour</div> : 
+        <div className="" onClick={handleBorder}>Ajouter contour</div>
+        }
       </div>
     </div>
   );

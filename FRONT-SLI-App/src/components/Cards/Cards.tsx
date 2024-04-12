@@ -25,6 +25,7 @@ const Cards: React.FC<CardProps> = ({
   const [cardTheme, setCardTheme] = useState(theme);
   
   const [cardType, setCardType] = useState(type);
+  const [css, setCss] = useState("");
 
   const idString = id.toString();
 
@@ -46,12 +47,12 @@ const Cards: React.FC<CardProps> = ({
   return (
     <div
       id={idString}
-      className={`${containerClass} ${className}`}
+      className={`${containerClass} ${className} ${css}`}
       onClick={onClick}
     >
       {showModal ? (
         <>
-          <OptionMenuModal id={id} theme={cardTheme} setCardTheme={setCardTheme} setShowModal={setShowModal} setCardType={setCardType}/>
+          <OptionMenuModal id={id} theme={cardTheme} setCss={setCss} setCardTheme={setCardTheme} setShowModal={setShowModal} setCardType={setCardType}/>
         </>
       ) : (
         <>
