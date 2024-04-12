@@ -6,14 +6,25 @@ interface OptionMenuModalProps {
   theme?: string;
   setCardTheme: (theme: string) => void;
   setShowModal: (showModal: boolean) => void;
+  setCardType: (type: string) => void;
 }
 
-function OptionMenuModal({ id, theme, setCardTheme, setShowModal }: OptionMenuModalProps) {
+function OptionMenuModal({ id, theme, setCardTheme, setCardType, setShowModal }: OptionMenuModalProps) {
+  
+  const [selectedIcon, setSelectedIcon] = useState('home');
+  const icons = ['home', 'face', 'build', 'alarm', 'work', 'school'];
+  
+  
+  
+  const closeModal = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    setShowModal(false);
+  };
+  
+  // ------------------------------------------------ Gestion changement couleur --------------------------------
   const colorPickerRef = useRef<HTMLInputElement>(null);
-
   const changeColor = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
-    // Déclencher le color picker
     if (colorPickerRef.current) {
       colorPickerRef.current.click();
       
@@ -22,26 +33,28 @@ function OptionMenuModal({ id, theme, setCardTheme, setShowModal }: OptionMenuMo
 
   const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCardTheme(e.target.value);
-  };
-
-
-  const closeModal = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.stopPropagation();
     setShowModal(false);
   };
 
 
 
+  // ------------------------------------------------ Gestion changement Logo --------------------------------
+  const changeType = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    console.log("Changer logo", id);
+  };
+
+
   return (
-    <div className="modal-container">
+    <div className="">
       <Icon
         type="close"
-        theme="red"
+        theme="#990000"
         className="text-xl absolute right-0 top-0"
         onClick={closeModal}
       />
-      <div className="options-container">
-        <div className="option-item" onClick={changeColor}>
+      <div className="flex flex-col items-start text-sm gap-2 pt-4">
+        <div className="" onClick={changeColor}>
           Changer couleur
           <input
             ref={colorPickerRef}
@@ -50,9 +63,9 @@ function OptionMenuModal({ id, theme, setCardTheme, setShowModal }: OptionMenuMo
             onChange={handleColorChange}
           />
         </div>
-        <div className="option-item">Changer logo</div>
-        <div className="option-item">Supprimer la carte</div>
-        <div className="option-item">Ajouter contour</div>
+        <div className="" onClick={changeType}>Changer logo</div>
+        <div className="">Supprimer la carte</div>
+        <div className="">Ajouter contour</div>
       </div>
     </div>
   );

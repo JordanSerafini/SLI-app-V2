@@ -23,6 +23,8 @@ const Cards: React.FC<CardProps> = ({
   const [showModal, setShowModal] = useState(false);
 
   const [cardTheme, setCardTheme] = useState(theme);
+  
+  const [cardType, setCardType] = useState(type);
 
   const idString = id.toString();
 
@@ -31,8 +33,6 @@ const Cards: React.FC<CardProps> = ({
     setShowModal(!showModal);
   };
   
-
-
   // La classe pour l'icône, inchangée
   const iconClass = "text-3xl font-extralight";
 
@@ -51,7 +51,7 @@ const Cards: React.FC<CardProps> = ({
     >
       {showModal ? (
         <>
-          <OptionMenuModal id={id} theme={cardTheme} setCardTheme={setCardTheme} setShowModal={setShowModal}/>
+          <OptionMenuModal id={id} theme={cardTheme} setCardTheme={setCardTheme} setShowModal={setShowModal} setCardType={setCardType}/>
         </>
       ) : (
         <>
@@ -61,7 +61,7 @@ const Cards: React.FC<CardProps> = ({
             className={moreHorizIconClass}
             onClick={optionClick}
           />
-          <Icon type={type} theme={cardTheme} className={iconClass} />
+          <Icon type={cardType} theme={cardTheme} className={iconClass} />
           {title ? <div style={{color: cardTheme}}>{title}</div> : <div>title</div>}
         </>
       )}
