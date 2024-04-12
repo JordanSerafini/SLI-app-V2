@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Icon from "../SVG/Icon";
 
 interface OptionMenuModalProps {
@@ -9,25 +9,29 @@ interface OptionMenuModalProps {
   setCardType: (type: string) => void;
 }
 
-function OptionMenuModal({ id, theme, setCardTheme, setCardType, setShowModal }: OptionMenuModalProps) {
-  
-  const [selectedIcon, setSelectedIcon] = useState('home');
-  const icons = ['home', 'face', 'build', 'alarm', 'work', 'school'];
-  
-  
-  
+function OptionMenuModal({
+  id,
+  theme,
+  setCardTheme,
+  setCardType,
+  setShowModal,
+}: OptionMenuModalProps) {
+  const [selectedIcon, setSelectedIcon] = useState("home");
+  const icons = ["home", "face", "build", "alarm", "work", "school"];
+
+  const [showLogoPicker, setShowLogoPicker] = useState(false);
+
   const closeModal = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
     setShowModal(false);
   };
-  
+
   // ------------------------------------------------ Gestion changement couleur --------------------------------
   const colorPickerRef = useRef<HTMLInputElement>(null);
   const changeColor = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
     if (colorPickerRef.current) {
       colorPickerRef.current.click();
-      
     }
   };
 
@@ -36,14 +40,16 @@ function OptionMenuModal({ id, theme, setCardTheme, setCardType, setShowModal }:
     setShowModal(false);
   };
 
-
-
   // ------------------------------------------------ Gestion changement Logo --------------------------------
-  const changeType = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.stopPropagation();
-    console.log("Changer logo", id);
+  const typeChange = (newType: string) => {
+    setCardType(newType);
+    setSelectedIcon(newType);
   };
 
+  const showLogoPickerModal = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    setShowLogoPicker(!showLogoPicker);
+  };
 
   return (
     <div className="">
@@ -59,11 +65,27 @@ function OptionMenuModal({ id, theme, setCardTheme, setCardType, setShowModal }:
           <input
             ref={colorPickerRef}
             type="color"
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
             onChange={handleColorChange}
           />
         </div>
-        <div className="" onClick={changeType}>Changer logo</div>
+        <div className="flex">
+          <div onClick={showLogoPickerModal}>Changer logo</div>
+          {showLogoPicker && (
+          <select
+            value={selectedIcon}
+            onChange={(e) => typeChange(e.target.value)}
+            className="ml-2 border border-gray-300 rounded p-1 cursor-pointer"
+          >
+            
+            {icons.map((icon) => (
+              <option key={icon} value={icon}>
+                {icon}
+              </option>
+            ))}
+          </select>
+          )}
+        </div>
         <div className="">Supprimer la carte</div>
         <div className="">Ajouter contour</div>
       </div>
