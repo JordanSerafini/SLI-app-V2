@@ -1,6 +1,6 @@
 import BottomNav from "../components/nav/navBar/BottomNav";
 import HomeContent from "../components/Home/HomeContent";
-import MenuHome from "../components/nav/menu/MenuHome";
+import MenuHome from "../components/Home/MenuHome";
 
 function Home() {
   return (

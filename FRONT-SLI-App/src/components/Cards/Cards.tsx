@@ -9,6 +9,7 @@ interface CardProps {
   theme?: string;
 }
 
+
 // Utilisation d'une fonction fléchée pour déclarer le composant
 const Cards: React.FC<CardProps> = ({ title, type, theme, onClick, className = '' }) => {
   theme = theme || "black";
