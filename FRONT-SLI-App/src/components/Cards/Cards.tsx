@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Icon from "../SVG/Icon";
 import OptionMenuModal from "../modals/optionMenuModal";
 

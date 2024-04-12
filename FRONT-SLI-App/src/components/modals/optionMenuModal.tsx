@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Icon from "../SVG/Icon";
 
 interface OptionMenuModalProps {
@@ -61,6 +61,7 @@ function OptionMenuModal({
     setShowBorder(true);
     setCss("border-2 border-black")
     setShowModal(false);
+
   }
 
   const removeBorder=()=>{
@@ -71,6 +72,7 @@ function OptionMenuModal({
 
 
 
+  
   return (
     <div className="">
       <Icon
@@ -108,9 +110,11 @@ function OptionMenuModal({
         </div>
         <div className="">Supprimer la carte</div>
 
-        {showBorder ? <div className="" onClick={removeBorder}>Supprimer contour</div> : 
-        <div className="" onClick={handleBorder}>Ajouter contour</div>
-        }
+        {showBorder ? (
+          <div className="" onClick={removeBorder}>Supprimer contour</div>
+        ) : (
+          <div className="" onClick={handleBorder}>Ajouter contour</div>
+        )}
       </div>
     </div>
   );
